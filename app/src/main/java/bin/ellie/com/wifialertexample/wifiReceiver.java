@@ -48,7 +48,7 @@ public class wifiReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String s = intent.getAction();
         if (s.equals("android.net.conn.CONNECTIVITY_CHANGE")) {
-            if (!IsWiFiConnected(context) && !isNetConnected(context)) {
+            if (!IsWiFiConnected(context)) {
                 Toast.makeText(context, "wifi not connected", Toast.LENGTH_LONG).show();
             }
             return;
